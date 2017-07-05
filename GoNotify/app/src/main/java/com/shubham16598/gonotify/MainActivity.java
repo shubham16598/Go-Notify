@@ -41,9 +41,9 @@ public class MainActivity extends AwesomeSplash {
         //Customize Title
         configSplash.setTitleSplash("GO NOTIFY");
         configSplash.setTitleTextColor(R.color.colorAccent);
-        configSplash.setTitleTextSize(50f)//float value
+        configSplash.setTitleTextSize(50f);//float value
         configSplash.setAnimTitleDuration(3000);
-        configSplash.setAnimTitleTechnique(Techniques.FlipInX);
+        configSplash.setAnimTitleTechnique(Techniques.FadeIn);
 
     }
 
@@ -57,6 +57,7 @@ public class MainActivity extends AwesomeSplash {
                     e.printStackTrace();
                 }finally{
                     Intent intent = new Intent(MainActivity.this,Home.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
                 }
             }
