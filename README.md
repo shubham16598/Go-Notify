@@ -1,2 +1,0 @@
-# gonotofier
-Android Project
